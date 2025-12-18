@@ -10,6 +10,7 @@ app.use(express.static("public"));
 
 let vectors = [];
 let resumeEmbedded = false;
+
 (async () => {
   try{
   vectors = await embedResume();
@@ -34,7 +35,7 @@ app.post("/chat", async (req, res) => {
     res.json({ reply });
   } catch (error) {
     console.error("Error handling /chat request:", error);
-    res.json({ reply: "An error occurred while processing your request.", error: error.message});
+    res.json({ reply: "An error occurred while processing your request.", error});
   };
 })
 app.listen(3000, () => {

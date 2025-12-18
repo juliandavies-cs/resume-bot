@@ -27,6 +27,7 @@ function cosineSimilarity(a, b) {
 }
 
 export async function answerQuestion(question, vectors) {
+  let completion;
   try{
     const questionEmbedding = await openai.embeddings.create({
       model: "text-embedding-3-small",
@@ -45,7 +46,7 @@ export async function answerQuestion(question, vectors) {
       .map(v => v.text)
       .join("\n");
 
-    const completion = await openai.responses.create({
+    completion = await openai.responses.create({
       model: "gpt-5-mini",
       input: [
         {
