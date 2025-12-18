@@ -17,18 +17,22 @@ let resumeEmbedded = false;
 })();
 
 app.post("/chat", async (req, res) => {
-  const { message } = req.body;
+  try{
+    const { message } = req.body;
 
-  if (!resumeEmbedded) {
-    return res.json({
-      reply: "Resume is still being processed. Please try again later.",
-    });
-  }
+    if (!resumeEmbedded) {
+      return res.json({
+        reply: "Resume is still being processed. Please try again later.",
+      });
+    }
 
-  const reply = await answerQuestion(message, vectors);
-  res.json({ reply });
-});
-
+    const reply = await answerQuestion(message, vectors);
+    res.json({ reply });
+  } catch (error) {
+    console.error("Error handling /chat request:", error);
+    res.json({ reply: "An error occurred while processing your request." });
+  };
+})
 app.listen(5000, () => {
   console.log("Server running on http://localhost:5000");
 });
