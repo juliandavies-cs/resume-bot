@@ -11,9 +11,13 @@ app.use(express.static("public"));
 let vectors = [];
 let resumeEmbedded = false;
 (async () => {
+  try{
   vectors = await embedResume();
   console.log("Resume embedded");
   resumeEmbedded = true;
+  } catch (error) {
+    console.error("Error embedding resume:", error);
+  }
 })();
 
 app.post("/chat", async (req, res) => {
