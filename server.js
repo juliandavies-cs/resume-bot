@@ -34,9 +34,9 @@ app.post("/chat", async (req, res) => {
     res.json({ reply });
   } catch (error) {
     console.error("Error handling /chat request:", error);
-    res.json({ reply: "An error occurred while processing your request." });
+    res.json({ reply: "An error occurred while processing your request.", error: error.message});
   };
 })
 app.listen(3000, () => {
-  console.log("Server running on http://localhost:3000");
+  console.log("Server running on port 3000");
 });
