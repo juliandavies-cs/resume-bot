@@ -216,11 +216,6 @@
     showTyping();
 
     try {
-      const API_BASE_URL =
-        window.location.hostname === "localhost"
-      ? "http://localhost:3000"
-      : "https://resume-bot-td8i.onrender.com/";
-
       const response = await fetch("https://resume-bot-td8i.onrender.com/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
