@@ -178,6 +178,7 @@
   const inputEl = document.getElementById("input");
   const sendBtn = document.getElementById("sendBtn");
   const statusEl = document.getElementById("status");
+  let resumeReady = false;
 
   function addMessage(text, role) {
     const div = document.createElement("div");
@@ -240,15 +241,60 @@
     }
   }
 
-  window.onload = () => {
-    inputEl.disabled = false;
-    sendBtn.disabled = false;
+  window.onload = async () => {
+    const response = await fetch("https://resume-bot-td8i.onrender.com/status");
+    const data = await response.json();
 
-    addMessage(
-      "Hello! Welcome to Julian’s Resume Chatbot. Please feel free to ask me any questions regarding his resume and qualifications.",
-      "bot"
-    );
+    if (data.ready) {
+      addMessage(
+        "Hello! Welcome to Julian’s Resume Chatbot. Please feel free to ask me any questions regarding his resume and qualifications.",
+        "bot"
+      );
+
+      inputEl.disabled = false;
+      sendBtn.disabled = false;
+      quickButtons.forEach(btn => (btn.disabled = false));
+      resumeReady = true;
+    } else {
+      inputEl.disabled = false;
+      sendBtn.disabled = false;
+
+      addMessage(
+        "Hello! Welcome to Julian’s Resume Chatbot. I am currently embedding his resume. Please allow me a few seconds to finish processing it. I will let you know when it is ready.",
+        "bot"
+      );
+
+      pollResumeStatus()
+    }
   };
+
+  async function pollResumeStatus() {
+    if (resumeReady) {
+      return;
+    }
+    try {
+      const response = await fetch("https://resume-bot-td8i.onrender.com/status");
+      const data = await response.json();
+
+      if (data.ready) {
+        resumeReady = true;
+
+        addMessage(
+          "The resume has been processed successfully. You can now ask me questions about Julian’s experience and qualifications. ",
+          "bot"
+        );
+
+        inputEl.disabled = false;
+        sendBtn.disabled = false;
+        quickButtons.forEach(btn => btn.disabled = false);
+      } else {
+        setTimeout(pollResumeStatus, 1000);
+      }
+    } catch (err) {
+      console.error("Status check failed, retrying...");
+      setTimeout(pollResumeStatus, 1000);
+    }
+  }
 
   inputEl.addEventListener("keydown", e => {
     if (e.key === "Enter") sendMessage();

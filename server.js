@@ -38,6 +38,11 @@ app.post("/chat", async (req, res) => {
     res.json({ reply: "An error occurred while processing your request."});
   };
 })
+
+app.get("/status", (req, res) => {
+  res.json({ ready: resumeEmbedded });
+});
+
 app.listen(3000, () => {
   console.log("Server running on port 3000");
 });
