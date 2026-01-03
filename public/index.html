@@ -14,19 +14,15 @@
       background: #f4f6f8;
       margin: 0;
       padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      height: 100dvh; /* ✅ dynamic viewport height */
     }
 
     .chat-container {
       background: white;
       width: 100%;
+      height: 100dvh; /* ✅ fills mobile screen */
       max-width: 900px;
-      height: 90vh;
-      border-radius: 10px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      margin: 0 auto;
       display: flex;
       flex-direction: column;
       overflow: hidden;
@@ -139,6 +135,51 @@
       background: #9ca3af;
       cursor: not-allowed;
     }
+
+    @media (max-width: 768px) {
+      .chat-container {
+        border-radius: 0; /* ✅ edge-to-edge */
+        box-shadow: none;
+      }
+
+      .chat-header {
+        font-size: 16px;
+        padding: 12px;
+      }
+
+      .quick-prompts {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .quick-prompts button {
+        font-size: 13px;
+        padding: 6px 12px;
+      }
+
+      .messages {
+        padding: 12px;
+      }
+
+      .message {
+        max-width: 90%; /* ✅ better for small screens */
+        font-size: 15px;
+      }
+
+      .input-area {
+        padding: 8px;
+      }
+
+      .input-area input {
+        font-size: 16px; /* ✅ prevents iOS zoom */
+      }
+
+      .input-area button {
+        padding: 10px 14px;
+        font-size: 15px;
+      }
+    }
+
   </style>
 </head>
 <body>
