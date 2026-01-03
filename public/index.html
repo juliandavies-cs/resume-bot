@@ -4,56 +4,48 @@
   <meta charset="UTF-8" />
   <title>Julian’s Resume Chatbot</title>
 
-  <style>
+<style>
     * {
       box-sizing: border-box;
     }
 
-    html,
     body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       background: #f4f6f8;
-      overscroll-behavior: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
 
-    /* Root container */
     .chat-container {
       background: white;
       width: 100%;
       max-width: 900px;
-      margin: 0 auto;
-
-      /* 🔑 Critical mobile height fix */
-      height: calc(var(--vh, 1vh) * 100);
-
+      height: 90vh;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       display: flex;
       flex-direction: column;
       overflow: hidden;
     }
 
-    /* Header */
     .chat-header {
-      flex-shrink: 0;
-      padding: 14px 16px;
+      padding: 16px;
       background: #111827;
       color: white;
       font-size: 18px;
       font-weight: bold;
     }
 
-    /* Quick prompt buttons */
     .quick-prompts {
-      flex-shrink: 0;
       display: flex;
       gap: 10px;
-      padding: 10px 14px;
+      padding: 12px 16px;
       border-bottom: 1px solid #e5e7eb;
       background: #f9fafb;
-      overflow-x: auto;
     }
 
     .quick-prompts button {
@@ -63,48 +55,61 @@
       background: white;
       cursor: pointer;
       font-size: 14px;
-      white-space: nowrap;
+      transition: all 0.2s ease;
     }
 
-    /* Messages area */
+    .quick-prompts button:hover {
+      background: #2563eb;
+      color: white;
+      border-color: #2563eb;
+    }
+
+    .status {
+      padding: 8px 16px;
+      font-size: 14px;
+      background: #fef3c7;
+      color: #92400e;
+      display: none;
+    }
+
     .messages {
-      flex: 1 1 auto; /* 🔑 allows scrolling */
-      padding: 16px;
+      flex: 1;
+      padding: 20px;
       overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
       background: #f9fafb;
     }
 
-    /* Individual messages */
     .message {
-      margin-bottom: 14px;
+      margin-bottom: 16px;
       max-width: 75%;
       line-height: 1.4;
       padding: 12px 14px;
       border-radius: 8px;
       white-space: pre-wrap;
-      word-wrap: break-word;
     }
 
     .message.user {
       background: #2563eb;
       color: white;
       margin-left: auto;
-      border-bottom-right-radius: 4px;
+      border-bottom-right-radius: 2px;
     }
 
     .message.bot {
       background: #e5e7eb;
       color: #111827;
-      border-bottom-left-radius: 4px;
+      border-bottom-left-radius: 2px;
     }
 
-    /* Input area */
+    .typing {
+      font-style: italic;
+      color: #6b7280;
+      margin-bottom: 10px;
+    }
+
     .input-area {
-      flex-shrink: 0; /* 🔑 keeps it above keyboard */
       display: flex;
-      gap: 10px;
-      padding: 10px;
+      padding: 12px;
       border-top: 1px solid #e5e7eb;
       background: white;
     }
@@ -114,12 +119,13 @@
       padding: 12px;
       border-radius: 6px;
       border: 1px solid #d1d5db;
-      font-size: 16px; /* 🔑 prevents iOS zoom */
+      font-size: 16px;
       outline: none;
     }
 
     .input-area button {
-      padding: 12px 18px;
+      margin-left: 10px;
+      padding: 12px 20px;
       font-size: 16px;
       border-radius: 6px;
       border: none;
@@ -128,39 +134,11 @@
       color: white;
     }
 
-    .input-area input:disabled,
-    .input-area button:disabled {
+    .input-area button:disabled,
+    .input-area input:disabled {
       background: #9ca3af;
       cursor: not-allowed;
     }
-
-    /* 📱 Mobile-specific tweaks */
-    @media (max-width: 768px) {
-      .chat-container {
-        max-width: 100%;
-      }
-
-      .chat-header {
-        font-size: 16px;
-        padding: 12px;
-      }
-
-      .messages {
-        padding: 12px;
-      }
-
-      .message {
-        max-width: 90%;
-        font-size: 15px;
-      }
-
-      .quick-prompts button {
-        font-size: 13px;
-        padding: 6px 12px;
-      }
-    }
-
-
   </style>
 </head>
 <body>
@@ -196,14 +174,6 @@
 </div>
 
 <script>
-  function setViewportHeight() {
-    const vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
-  }
-
-  setViewportHeight();
-  window.addEventListener("resize", setViewportHeight);
-
   const messagesEl = document.getElementById("messages");
   const inputEl = document.getElementById("input");
   const sendBtn = document.getElementById("sendBtn");
