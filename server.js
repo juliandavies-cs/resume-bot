@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import { embedResume } from "./embedResume.js";
-import { answerQuestion } from "./queryResume.js";
+import { answerQuestionFullResume } from "./queryResume.js";
 
 const app = express();
 app.use(cors());
@@ -22,22 +22,19 @@ let resumeEmbedded = false;
 })();
 
 app.post("/chat", async (req, res) => {
-  try{
+  try {
     const { message } = req.body;
 
-    if (!resumeEmbedded) {
-      return res.json({
-        reply: "Resume is still being processed. Please try again later.",
-      });
-    }
+    // Optionally, you can keep the resumeEmbedded check if you want to ensure the file is available
+    // For now, we assume the resume file is always available
 
-    const reply = await answerQuestion(message, vectors);
+    const reply = await answerQuestionFullResume(message);
     res.json({ reply });
   } catch (error) {
     console.error("Error handling /chat request:", error);
-    res.json({ reply: "An error occurred while processing your request."});
-  };
-})
+    res.json({ reply: "An error occurred while processing your request." });
+  }
+});
 
 app.get("/status", (req, res) => {
   res.json({ ready: resumeEmbedded });
