@@ -1,55 +1,57 @@
-Name: Julian Davies 
 
-Phone: (289)-242-7897 | Email: juliandavies.cs@gmail.com 
+Julian Davies
+(289) 242-7897 | Email: juliandavies.cs@gmail.com
+GitHub: https://github.com/juliandavies-cs | Portfolio: https://resume-bot-td8i.onrender.com/
 
-Github: https://github.com/juliandavies-cs 
- 
-Work Experience: 
-1. Software Developer - Opentext - 2025 – Present 
-- Backend development including using LangChain and LangGraph. 
-- Integrated vector databases to store and retrieve embeddings for responses and semantic search. 
-- Leverage LangGraph to orchestrate multi-agent and multi-tool flows for the highest accuracy. 
-- Optimized prompt engineering to enhance LLM response quality. - Maintain a microservices structure. 
-- Adhere to CI/CD pipeline and linting requirements.
-2. Software Developer - Opentext - 2023 – 2025:
-- Backend development including integrating a SQL database with existing and new APIs. 
-- Work with OAuth2 authentication flows for cloud and on-prem customers. 
-- Lead development of token lifecycle using Redis. 
-- Maintain a microservices structure. 
-- Adhere to CI/CD pipeline and linting requirements. 
-- Work with HTML, CSS, and Javascript to create a user-friendly experience. 
-- Use EJS templating for server-side HTML generation. 
-3. Associate Quality Assurance Developer - Opentext - 2022 – 2023 
-- Assisted in software development to aid the implementation of new features. 
-- Managed and tested within different environments including development, pre-production, and 
-multi-international production. 
-- Contributed and designed functionality of automated tests using Selenium. 
-- Designed and ran regression tests to meet hard deadlines. 
-- Worked within a QA Team to collectively assess bugs and their impact on customers. 
-- Wrote Python scripts to tackle inconsistent bugs to define reproducibility and level of 
-importance. 
-- Worked with developers on feature implementations to identify edge-cases and overall 
-customer experience. 
-- Implemented accessibility features to the product (JAWS).
+PROFESSIONAL SUMMARY
+Results-driven Software Developer with 3+ years of experience designing, building, and scaling secure, cloud-based, and AI-powered applications. Proven expertise in backend development, microservices architecture, API integration, and large language model systems. Strong track record of improving performance, reliability, and user experience in enterprise environments.
 
-Years of Experience: 3+
-Programming Languages: Python, Javascript, Java, HTML/CSS
-Tools: Git, JIRA, JUnit, Selenium, Postman API, Redis 
+PROFESSIONAL EXPERIENCE
+1. Software Developer | OpenText | 2025 – Present
+- Designed and deployed AI-powered backend systems using LangChain and LangGraph
+- Integrated vector databases for scalable knowledge retrieval
+- Orchestrated multi-agent workflows to improve reliability
+- Optimized LLM prompt engineering and workflows
+- Maintained distributed microservices architecture
+- Enforced CI/CD standards and automated testing
+2. Software Developer | OpenText | 2023 – 2025
+- Developed RESTful APIs supporting enterprise users
+- Integrated SQL databases with backend services
+- Implemented OAuth2 authentication flows
+- Built token lifecycle management using Redis
+- Created responsive UI with JavaScript and EJS
+- Collaborated in Agile development teams
+3. Associate Quality Assurance Developer | OpenText | 2022 – 2023
+- Built automated testing frameworks using Selenium and Python
+- Executed regression testing across environments
+- Analyzed defects and collaborated with developers
+- Developed scripts to isolate complex bugs
+- Implemented accessibility compliance
+4. Software Development Intern | OpenText | 2021
+- Led regression testing initiatives
+- Documented and prioritized defects
+5. Software Development & QA Intern | OpenText | 2017 – 2020
+- Developed JavaScript QA tools
+- Implemented performance enhancements
+- Conducted peer code reviews
 
-Education: 
-Carleton University - Bachelor of Computer Science 
-Appleby College - Highschool Diploma 
+CORE TECHNICAL SKILLS
+Languages: Python, JavaScript, TypeScript, Java, HTML, CSS
+Frameworks: Node.js, Spring Boot, LangChain, LangGraph, EJS
+Databases: SQL, Redis, Vector Databases
+DevOps: Microservices, REST APIs, OAuth2, CI/CD
+Tools: Selenium, JUnit, Git, JIRA, Postman
+Methodologies: Agile, Scrum, SDLC, TDD
 
-Volunteer Experience:
-1. Oakwood Breakfast Program September 2014 - May 2015 
-- Prepared and served breakfast for an elementary school 
-2. First Mentors September 2013 - May 2014
-- Planned and participated in activities for children that are a part of Big Brother Big Sister that 
-are awaiting for their match 
-3. Camp Justice July 2013 - August 2013 
-- Played games and taught children within lower privileged areas 
-4. Service Project in Tanzania March 2013 
-- Helped a local school by building the foundation of a new classroom as well as attended 
-classes with the children 
-5. Service Project in Costa Rica March 2011 
-- Helped a local community by building a well, greenhouse, and a gate to keep out wild animals 
+EDUCATION
+Bachelor of Computer Science – Carleton University
+High School Diploma – Appleby College
+
+PROJECTS
+AI Resume Assistant
+- Built an AI-powered resume chatbot using LLMs, vector search, and REST APIs
+- Deployed scalable backend infrastructure with CI/CD pipelines
+Sports Betting Notifier
+- Developed a real-time Discord bot for sports betting alerts
+- Designed configurable user preferences and alert routing
+
