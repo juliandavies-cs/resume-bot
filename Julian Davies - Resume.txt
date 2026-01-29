@@ -1,7 +1,9 @@
 
-Julian Davies
-(289) 242-7897 | Email: juliandavies.cs@gmail.com
-GitHub: https://github.com/juliandavies-cs | Portfolio: https://resume-bot-td8i.onrender.com/
+Name: Julian Davies
+Phone: (289) 242-7897
+Email: juliandavies.cs@gmail.com
+GitHub: https://github.com/juliandavies-cs
+Portfolio: https://resume-bot-td8i.onrender.com/
 
 PROFESSIONAL SUMMARY
 Results-driven Software Developer with 3+ years of experience designing, building, and scaling secure, cloud-based, and AI-powered applications. Proven expertise in backend development, microservices architecture, API integration, and large language model systems. Strong track record of improving performance, reliability, and user experience in enterprise environments.
