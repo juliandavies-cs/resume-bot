@@ -6,6 +6,13 @@ import { answerQuestionFullResume } from "./queryResume.js";
 const app = express();
 app.use(cors());
 app.use(express.json());
+// Custom middleware to log when index.html is served
+app.use((req, res, next) => {
+  if (req.method === 'GET' && (req.path === '/' || req.path === '/index.html')) {
+    console.log('Page loaded.');
+  }
+  next();
+});
 app.use(express.static("public"));
 
 let vectors = [];
