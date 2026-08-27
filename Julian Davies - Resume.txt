@@ -6,28 +6,28 @@ GitHub: https://github.com/juliandavies-cs
 Portfolio: https://resume-bot-td8i.onrender.com/
 
 PROFESSIONAL SUMMARY
-Results-driven Software Developer with 3+ years of experience designing, building, and scaling secure, cloud-based, and AI-powered applications. Proven expertise in backend development, microservices architecture, API integration, and large language model systems. Strong track record of improving performance, reliability, and user experience in enterprise environments.
+Results-driven Software Developer with 4+ years of professional experience building secure, cloud-based enterprise applications, backend services, REST APIs, and AI-powered systems. Strong hands-on expertise in Java, Python, Node.js, Spring Boot, SQL, Redis, OAuth2, microservices, automated testing, LangChain, LangGraph, LLM workflows, and vector databases. Proven ability to translate AI capabilities into reliable software, develop maintainable APIs and services, improve system performance, and deliver solutions across development, testing, debugging, and production support.
 
 PROFESSIONAL EXPERIENCE
 1. Software Developer | OpenText | 2025 – Present
 - Designed and deployed AI-powered backend systems using LangChain and LangGraph
-- Integrated vector databases for scalable knowledge retrieval
-- Orchestrated multi-agent workflows to improve reliability
-- Optimized LLM prompt engineering and workflows
-- Maintained distributed microservices architecture
-- Enforced CI/CD standards and automated testing
+- Integrated vector databases for scalable knowledge retrieval for LLM applications
+- Orchestrated multi-agent workflows to improve reliability and consistency across AI tasks
+- Optimized prompt engineering and LLM workflows for more effective application behaviour
+- Maintained distributed microservices supporting reliable enterprise workflows
+- Applied CI/CD standards and automated testing to improve release reliability
 2. Software Developer | OpenText | 2023 – 2025
-- Developed RESTful APIs supporting enterprise users
-- Integrated SQL databases with backend services
-- Implemented OAuth2 authentication flows
-- Built token lifecycle management using Redis
-- Created responsive UI with JavaScript and EJS
-- Collaborated in Agile development teams
+- Developed and maintained RESTful APIs supporting enterprise application functionality
+- Integrated SQL databases with backend services and application workflows
+- Implemented OAuth2 authentication flows for secure API access
+- Built Redis-based token lifecycle management for authentication services
+- Developed JavaScript and EJS interfaces consuming backend services
+- Wroked with Agile teams across development, testing, debugging, and maintenance
 3. Associate Quality Assurance Developer | OpenText | 2022 – 2023
-- Built automated testing frameworks using Selenium and Python
-- Executed regression testing across environments
-- Analyzed defects and collaborated with developers
-- Developed scripts to isolate complex bugs
+- Built Selenium and Python automation frameworks for API and application regression testing
+- Executed regression testing across environments to validate releases
+- Analyzed defects and collaborated directly with developers on fixes
+- Created diagnostic scripts to isolate difficult software issues.
 - Implemented accessibility compliance
 4. Software Development Intern | OpenText | 2021
 - Led regression testing initiatives
@@ -38,12 +38,14 @@ PROFESSIONAL EXPERIENCE
 - Conducted peer code reviews
 
 CORE TECHNICAL SKILLS
-Languages: Python, JavaScript, TypeScript, Java, HTML, CSS
-Frameworks: Node.js, Spring Boot, LangChain, LangGraph, EJS
+Backend: Java, Python, Node.js, Spring Boot, REST APIs, Microservices, Distributed Systems
 Databases: SQL, Redis, Vector Databases
-DevOps: Microservices, REST APIs, OAuth2, CI/CD
-Tools: Selenium, JUnit, Git, JIRA, Postman
-Methodologies: Agile, Scrum, SDLC, TDD
+Security: OAuth2, Authentication, Token Management
+DevOps: CI/CD, Automated Testing, Git, Cloud Computing
+Testing: Selenium, JUnit, TDD, Regression Testing
+AI: LangChain, LangGraph, LLM Applications, Vector Databases
+Frontend: JavaScript, TypeScript, HTML, CSS, EJS,
+Tools: Postman, JIRA
 
 EDUCATION
 Bachelor of Computer Science – Carleton University
@@ -56,4 +58,3 @@ AI Resume Assistant
 Sports Betting Notifier
 - Developed a real-time Discord bot for sports betting alerts
 - Designed configurable user preferences and alert routing
-
