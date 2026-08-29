@@ -3,7 +3,7 @@ Name: Julian Davies
 Phone: (289) 242-7897
 Email: juliandavies.cs@gmail.com
 GitHub: https://github.com/juliandavies-cs
-Portfolio: https://resume-bot-td8i.onrender.com/
+Portfolio: https://portfolio-1-zbc7.onrender.com/
 
 PROFESSIONAL SUMMARY
 Results-driven Software Developer with 4+ years of professional experience building secure, cloud-based enterprise applications, backend services, REST APIs, and AI-powered systems. Strong hands-on expertise in Java, Python, Node.js, Spring Boot, SQL, Redis, OAuth2, microservices, automated testing, LangChain, LangGraph, LLM workflows, and vector databases. Proven ability to translate AI capabilities into reliable software, develop maintainable APIs and services, improve system performance, and deliver solutions across development, testing, debugging, and production support.
